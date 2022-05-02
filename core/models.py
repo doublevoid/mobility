@@ -8,9 +8,6 @@ class Provider(models.Model):
     language = models.CharField(max_length=2)
     currency = models.CharField(max_length=3)  # based on currency codes max length
 
-    def __str__(self):
-        return self.name
-
 
 class Location(models.Model):
     name = models.CharField(max_length=30)
@@ -22,6 +19,3 @@ class Location(models.Model):
     lat = models.FloatField()
     lng = models.FloatField()
     provider = models.ForeignKey(Provider, models.CASCADE)
-
-    def __str__(self):
-        return self.name

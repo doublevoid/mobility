@@ -24,7 +24,7 @@ SECRET_KEY = 'x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['mobility-test-gabriel.herokuapp.com']
+ALLOWED_HOSTS = ['localhost']
 
 # Application definition
 

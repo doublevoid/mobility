@@ -4,3 +4,4 @@ mysqlclient
 gunicorn
 redis
 django-redis
+dj_database_url
