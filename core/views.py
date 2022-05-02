@@ -16,7 +16,9 @@ class ProviderViewSet(viewsets.ModelViewSet):
         if (action == 'list'):
             context['fields'] = ('name', 'email', 'phone_number', 'language', 'currency')
         elif (action == 'create'):
-            context['fields'] = (['id'])
+            context['fields'] = ('id', 'name', 'email', 'phone_number', 'language', 'currency')
+        elif (action == 'update'):
+            context['fields'] = ('name', 'email', 'phone_number', 'language', 'currency')
         elif (action == 'retrieve'):
             context['fields'] = ('name', 'email', 'phone_number', 'language', 'currency')
         return context
@@ -38,7 +40,9 @@ class LocationViewSet(viewsets.ModelViewSet):
         elif (action == 'get_by_coordinates'):
             context['fields'] = ('name', 'price', 'provider', 'provider_detail')
         elif (action == 'create'):
-            context['fields'] = ('id', 'price', 'geojson', 'lat', 'lng', 'provider')
+            context['fields'] = ('id', 'price', 'geojson', 'lat', 'lng', 'provider', 'name')
+        elif (action == 'update'):
+            context['fields'] = ('price', 'geojson', 'lat', 'lng', 'provider', 'name')
         elif (action == 'retrieve'):
             context['fields'] = ('name', 'geojson')
         return context
